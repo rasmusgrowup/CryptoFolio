@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Weather forecasts for your local area">
+    <title th:text="${'CryptoFolio | Your Crypto Portfolio'}">CryptoFolio | Your Crypto Portfolio</title>
+    <!-- CSS -->
+    <link th:href="@{/css/index.css}" rel="stylesheet"></link>
+    <!-- JS -->
+    <script th:src="@{/js/main.js}" type="text/javascript" defer></script>
+    <!-- sockjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+    <body>
+        <nav th:class="${'navbar'}">
+            <h1 th:class="${'logo'}" th:text="${'CryptoFolio'}">CryptoFolio</h1>
+            <div th:class="${'menu'}">
+                <a th:href="${'/'}" th:class="${'active'}">Portfolio</a>
+                <a th:href="${'/crypto'}" th:class="${'not_active'}">Crypto</a>
+                <form action="/search" method="get" th:class="${'search-form'}">
+                    <label for="searchInput">Search Crypto Currency:</label>
+                    <input th:placeholder="${'Search ...'}" type="text" id="searchInput" th:class="${'search-input'}" name="searchQuery">
+                    <button type="submit" th:class="${'search-button'}">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!--p>Your CryptoFolio</p-->
+        <ul th:if="${!cryptoCurrencies.isEmpty()}" th:class="${'crypto-list'}">
+            <li th:each="cryptoCurrency : ${cryptoCurrencies}" th:class="${'crypto-item'}">
+                <a th:class="${'crypto-link'}" th:href="@{/crypto/{id}(id=${cryptoCurrency.id})}">
+                    <div th:class="${'crypto-link-inner'}">
+                        <div th:class="${'crypto-header'}">
+                            <span th:class="${'crypto-icon'}" th:style="'background-image: url(\'https://assets.coincap.io/assets/icons/' + ${cryptoCurrency.symbol.toLowerCase()} + '@2x.png\');'"></span>
+                            <span th:class="${'crypto-symbol'}" th:text="${cryptoCurrency.symbol}"></span>
+                            <span th:class="${'crypto-name'}" th:text="${cryptoCurrency.name}"></span>
+                        </div>
+                        <div th:class="${'info-container'}">
+                            <p th:if="${cryptoCurrency.changePercent24Hr != null}" th:text="'Change (24h): ' + ${#numbers.formatDecimal(cryptoCurrency.changePercent24Hr, 1, 2)} + '%'"
+                               th:id="${cryptoCurrency.id} + '_per'"></p>
+                            <p th:if="${cryptoCurrency.changePercent24Hr == null}" th:text="'Change (24h): N/A'"
+                               th:id="${cryptoCurrency.id} + '_per'"></p>
+                            <p th:text="'Rank: ' + ${cryptoCurrency.rank}">Rank</p>
+                        </div>
+                        <div th:class="${'price-container'}">
+                            <!-- span>Price:</span -->
+                            <span th:class="${'animate__flash'}" th:text="'$' + ${#numbers.formatDecimal(cryptoCurrency.priceUsd, 1, 2, 'POINT')}" th:id="${cryptoCurrency.id}"></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div th:if="${cryptoCurrencies.isEmpty()}" th:class="${'empty-list'}">
+            <h1>Welcome to CryptoFolio</h1>
+            <p>Your portfolio is empty. Time to buy some cryptocurrencies then!</p>
+            <p>Search for a cryptocurrency to add to your portfolio</p>
+        </div>
+        <footer>
+            <p>©2024 CryptoFolio | rasan22@student.sdu.dk</p>
+        </footer>
+    </body>
+</html>
