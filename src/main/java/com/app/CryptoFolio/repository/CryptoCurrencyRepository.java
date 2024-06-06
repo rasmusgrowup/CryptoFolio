@@ -1,6 +1,6 @@
-package com.app.CryptoWatcher.repository;
+package com.app.CryptoFolio.repository;
 
-import com.app.CryptoWatcher.model.CryptoCurrency;
+import com.app.CryptoFolio.model.CryptoCurrency;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

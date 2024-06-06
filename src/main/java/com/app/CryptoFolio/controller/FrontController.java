@@ -1,15 +1,11 @@
-package com.app.CryptoWatcher.controller;
+package com.app.CryptoFolio.controller;
 
-import com.app.CryptoWatcher.DTO.CryptoCurrencyDTO;
-import com.app.CryptoWatcher.service.CryptoCurrencyService;
+import com.app.CryptoFolio.DTO.CryptoCurrencyDTO;
+import com.app.CryptoFolio.service.CryptoCurrencyService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 

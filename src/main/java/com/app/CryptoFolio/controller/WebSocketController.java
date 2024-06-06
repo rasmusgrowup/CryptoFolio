@@ -1,7 +1,6 @@
-package com.app.CryptoWatcher.controller;
+package com.app.CryptoFolio.controller;
 
-import com.app.CryptoWatcher.service.CryptoCurrencyService;
-import com.app.CryptoWatcher.service.WebSocketClientService;
+import com.app.CryptoFolio.service.WebSocketClientService;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;

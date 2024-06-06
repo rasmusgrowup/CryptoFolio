@@ -1,18 +1,12 @@
-package com.app.CryptoWatcher.model;
+package com.app.CryptoFolio.DTO;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@Entity
-@NoArgsConstructor
-@AllArgsConstructor
-public class CryptoCurrency {
-    @Id
+public class CryptoCurrencyDTO {
     private String id;
     private String rank;
     private String symbol;
@@ -22,6 +16,7 @@ public class CryptoCurrency {
     private String marketCapUsd;
     private String volumeUsd24Hr;
     private String priceUsd;
+    @JsonProperty("changePercent24Hr") // Rename the field to match Java naming convention
     private String changePercent24Hr;
     private String vwap24Hr;
     private String explorer;

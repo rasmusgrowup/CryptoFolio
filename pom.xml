@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.app</groupId>
-	<artifactId>CryptoWatcher</artifactId>
+	<artifactId>CryptoFolio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CryptoWatcher</name>
+	<name>CryptoFolio</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>21</java.version>

@@ -1,7 +1,6 @@
-package com.app.CryptoWatcher.util;
+package com.app.CryptoFolio.util;
 
-import com.app.CryptoWatcher.DTO.CryptoCurrencyDTO;
-import com.app.CryptoWatcher.model.CryptoCurrency;
+import com.app.CryptoFolio.model.CryptoCurrency;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;

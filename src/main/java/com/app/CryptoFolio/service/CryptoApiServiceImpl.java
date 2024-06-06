@@ -1,9 +1,9 @@
-package com.app.CryptoWatcher.service;
+package com.app.CryptoFolio.service;
 
-import com.app.CryptoWatcher.DTO.CryptoCurrencyDTO;
-import com.app.CryptoWatcher.model.CryptoCurrency;
-import com.app.CryptoWatcher.util.CryptoCurrencyListResponse;
-import com.app.CryptoWatcher.util.CryptoCurrencyResponse;
+import com.app.CryptoFolio.DTO.CryptoCurrencyDTO;
+import com.app.CryptoFolio.model.CryptoCurrency;
+import com.app.CryptoFolio.util.CryptoCurrencyListResponse;
+import com.app.CryptoFolio.util.CryptoCurrencyResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

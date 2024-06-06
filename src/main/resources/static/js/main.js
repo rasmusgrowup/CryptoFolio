@@ -107,3 +107,10 @@ var priceChart = new Chart(ctx, {
         animation: false
     }
 });
+
+document.getElementById("searchInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.querySelector(".search-form").submit();
+    }
+});

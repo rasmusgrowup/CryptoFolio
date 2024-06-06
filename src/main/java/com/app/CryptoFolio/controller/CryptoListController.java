@@ -1,7 +1,7 @@
-package com.app.CryptoWatcher.controller;
+package com.app.CryptoFolio.controller;
 
-import com.app.CryptoWatcher.DTO.CryptoCurrencyDTO;
-import com.app.CryptoWatcher.service.CryptoApiService;
+import com.app.CryptoFolio.DTO.CryptoCurrencyDTO;
+import com.app.CryptoFolio.service.CryptoApiService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

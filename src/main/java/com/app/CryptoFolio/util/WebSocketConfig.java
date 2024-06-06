@@ -1,4 +1,4 @@
-package com.app.CryptoWatcher.util;
+package com.app.CryptoFolio.util;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

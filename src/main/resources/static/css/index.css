@@ -7,7 +7,13 @@ html, body {
 }
 
 body {
-    padding: 2.5vw;
+    padding: 2vw;
+}
+
+footer {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding-top: 1vw;
 }
 
 .navbar {
@@ -22,8 +28,15 @@ body {
     align-items: center;
     color: var(--primary-color);
     display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
+.logo sup {
+    font-size: 15px;
+    margin-left: .2rem;
+}
 .search-form label {
     display: none;
 }
@@ -86,7 +99,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5vw;
-    margin: 3vw auto 5vw;
+    margin: 3vw auto;
     padding: 0;
     max-width: var(--max-width);
     list-style: none;
@@ -203,6 +216,7 @@ body {
 
 .search-results-list {
     margin: 0 auto;
+    max-width: var(--max-width);
     list-style: none;
     padding: 0;
 }
@@ -275,6 +289,8 @@ body {
 .crypto-detail-main {
     display: flex;
     gap: 1vw;
+    margin: 0 auto 3vw;
+    max-width: var(--max-width);
     padding-top: 1vw;
 }
 

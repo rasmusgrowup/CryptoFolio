@@ -1,14 +1,13 @@
-package com.app.CryptoWatcher.controller;
+package com.app.CryptoFolio.controller;
 
-import com.app.CryptoWatcher.model.CryptoCurrency;
-import com.app.CryptoWatcher.service.CryptoApiService;
+import com.app.CryptoFolio.model.CryptoCurrency;
+import com.app.CryptoFolio.service.CryptoApiService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
-import java.util.Objects;
 
 @Controller
 public class SearchController {

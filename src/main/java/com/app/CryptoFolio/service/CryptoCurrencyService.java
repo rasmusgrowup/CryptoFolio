@@ -1,7 +1,7 @@
-package com.app.CryptoWatcher.service;
+package com.app.CryptoFolio.service;
 
-import com.app.CryptoWatcher.DTO.CryptoCurrencyDTO;
-import com.app.CryptoWatcher.model.CryptoCurrency;
+import com.app.CryptoFolio.DTO.CryptoCurrencyDTO;
+import com.app.CryptoFolio.model.CryptoCurrency;
 
 import java.util.List;
 

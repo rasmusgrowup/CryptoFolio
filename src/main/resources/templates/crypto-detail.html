@@ -17,7 +17,10 @@
 </head>
     <body>
         <nav th:class="${'navbar'}">
-            <h1 th:class="${'logo'}" th:text="${'CryptoFolio'}">CryptoFolio</h1>
+            <a th:href="${'/'}" th:class="${'logo'}">
+                <span th:text="${'CryptoFolio'}">Logo</span>
+                <sup>®</sup>
+            </a>
             <div th:class="${'menu'}">
                 <a th:href="${'/'}" th:class="${'not_active'}">Portfolio</a>
                 <a th:href="${'/crypto'}" th:class="${'not_active'}">Crypto</a>
